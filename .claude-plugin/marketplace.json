@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "nachisto",
+  "owner": {
+    "name": "SilverElixir",
+    "url": "https://github.com/SilverElixir"
+  },
+  "plugins": [
+    {
+      "name": "nachisto",
+      "source": "./",
+      "description": "Русский humanizer: находит и убирает штампы ИИ-текста, не меняя смысла.",
+      "license": "MIT",
+      "keywords": [
+        "humanizer",
+        "russian",
+        "ai-text",
+        "editing"
+      ]
+    }
+  ]
+}
