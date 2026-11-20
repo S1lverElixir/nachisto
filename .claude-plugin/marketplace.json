@@ -15,7 +15,9 @@
         "humanizer",
         "russian",
         "ai-text",
-        "editing"
+        "editing",
+        "prose",
+        "skill"
       ]
     }
   ]
