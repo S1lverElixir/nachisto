@@ -1,7 +1,7 @@
 {
   "name": "nachisto",
   "description": "Русский humanizer: находит и убирает штампы ИИ-текста, не меняя смысла.",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "author": {
     "name": "SilverElixir",
     "url": "https://github.com/SilverElixir"
