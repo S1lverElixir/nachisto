@@ -21,14 +21,14 @@
 /plugin install nachisto@nachisto
 ```
 
-**ZCode, OpenCode, Cursor 2.4+, Qoder, MiniMax Code** — скопировать папку `nachisto` в каталог скиллов (из корня склонированного репозитория):
+**ZCode, OpenCode, Cursor 2.4+, Qoder, MiniMax Code** — склонировать репозиторий прямо в каталог скиллов (папка клона и есть скилл):
 
 ```
-cp -r nachisto ~/.agents/skills/           # ZCode
-cp -r nachisto ~/.config/opencode/skills/  # OpenCode — также читает ~/.agents/skills/
-cp -r nachisto ~/.cursor/skills/           # Cursor 2.4+ — также читает ~/.agents/skills/
-cp -r nachisto ~/.qoder/skills/            # Qoder
-cp -r nachisto ~/.minimax/skills/          # MiniMax Code
+git clone https://github.com/S1lverElixir/nachisto ~/.agents/skills/nachisto           # ZCode
+git clone https://github.com/S1lverElixir/nachisto ~/.config/opencode/skills/nachisto  # OpenCode — также читает ~/.agents/skills/
+git clone https://github.com/S1lverElixir/nachisto ~/.cursor/skills/nachisto           # Cursor 2.4+ — также читает ~/.agents/skills/
+git clone https://github.com/S1lverElixir/nachisto ~/.qoder/skills/nachisto            # Qoder
+git clone https://github.com/S1lverElixir/nachisto ~/.minimax/skills/nachisto          # MiniMax Code
 ```
 
 OpenCode и Cursor 2.4+ находят каталог `~/.agents/skills/` автоматически — одной копии хватит для ZCode, OpenCode и Cursor.
