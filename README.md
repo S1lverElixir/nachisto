@@ -2,6 +2,8 @@
 
 [![skills.sh installs](https://skills.sh/b/S1lverElixir/nachisto)](https://skills.sh/S1lverElixir/nachisto)
 
+**English:** nachisto is a skill for AI agents that removes AI-writing cliches from *Russian* prose — meaning intact. It works only on Russian text, and the skill itself is written in Russian. English triggers ("humanize this text", "clean up AI text", "make it sound natural") are built in: install it and just ask.
+
 Русский humanizer для ИИ-агентов: находит и убирает штампы машинного текста, не меняя смысла. Работает с любым агентом, который читает SKILL.md.
 
 Нейросети пишут одинаково: «не просто X, а Y», «важно отметить», «в современном мире», «Давайте разберёмся», ровные абзацы «тезис — развитие — вывод», закрывашки «И это работает». Читатель замечает это за секунды. nachisto — чек-лист из 27 паттернов с workflow правки: агент сам находит штампы, переписывает и проверяет, что не потерял и не добавил лишнего.

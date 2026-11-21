@@ -1,7 +1,7 @@
 {
   "name": "nachisto",
-  "description": "Русский humanizer: находит и убирает штампы ИИ-текста, не меняя смысла.",
-  "version": "2.4.2",
+  "description": "Russian humanizer: removes AI-writing cliches from Russian prose, meaning intact / убирает ИИ-штампы из русского текста",
+  "version": "2.4.3",
   "author": {
     "name": "S1lverElixir"
   },

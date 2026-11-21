@@ -23,3 +23,11 @@ jobs:
             echo "::error::Дрейф версий между SKILL.md, .claude-plugin/plugin.json и .cursor-plugin/plugin.json"
             exit 1
           fi
+      - name: Description в лимитах agentskills.io
+        run: |
+          dlen=$(python3 -c "import io,re; t=io.open('SKILL.md',encoding='utf-8').read(); fm=t.split('---')[1]; d=' '.join(re.search(r'description:\s*\|\n\s*(.*?)\nlicense:', fm, re.S).group(1).split()); print(len(d))")
+          echo "description=$dlen символов (лимит 1024)"
+          if [ "$dlen" -gt 1024 ] || [ "$dlen" -lt 1 ]; then
+            echo "::error::description вне лимита: $dlen"
+            exit 1
+          fi
