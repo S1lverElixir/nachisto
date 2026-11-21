@@ -1,0 +1,21 @@
+name: version-check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Версии SKILL.md и манифестов совпадают
+        run: |
+          skill=$(grep -oP 'version: "\K[0-9.]+' SKILL.md)
+          plugin=$(jq -r .version .claude-plugin/plugin.json)
+          cursor=$(jq -r .version .cursor-plugin/plugin.json)
+          echo "SKILL.md=$skill plugin.json=$plugin cursor=$cursor"
+          if [ "$skill" != "$plugin" ] || [ "$plugin" != "$cursor" ]; then
+            echo "::error::Дрейф версий между SKILL.md, .claude-plugin/plugin.json и .cursor-plugin/plugin.json"
+            exit 1
+          fi
