@@ -12,16 +12,22 @@
 
 ## Установка
 
-| Инструмент | Команда |
+Скилл — одна папка со SKILL.md. Многие агенты автоматически подхватывают каталог `~/.agents/skills/`.
+
+| Инструмент | Установка |
 |---|---|
 | Claude Code 2.1.142+ | `/plugin marketplace add S1lverElixir/nachisto`, затем `/plugin install nachisto@nachisto` |
 | Codex CLI | `npx skills add S1lverElixir/nachisto --global --agent codex` |
 | ZCode | скопировать папку со SKILL.md в `~/.agents/skills/nachisto/` |
+| OpenCode | скопировать папку в `~/.config/opencode/skills/nachisto/` — или в `~/.agents/skills/`, OpenCode находит её автоматически |
+| Cursor 2.4+ | скопировать папку в `~/.cursor/skills/nachisto/` — или в `~/.agents/skills/`, Cursor находит её автоматически |
+| Qoder | скопировать папку в `~/.qoder/skills/nachisto/` — или `npx skills add S1lverElixir/nachisto --global --agent qoder` |
+| MiniMax Code | скопировать папку в `~/.minimax/skills/nachisto/` — или через skills CLI (`--agent minimax-code`) |
 | pi | `pi install git:github.com/S1lverElixir/nachisto` |
-| Gemini CLI, GitHub Copilot, Windsurf | `npx skills add S1lverElixir/nachisto --global --agent '*'` |
+| Cline, Roo Code, Goose, Crush, Gemini CLI, GitHub Copilot, Windsurf, VS Code, OpenClaw, Junie и другие | `npx skills add S1lverElixir/nachisto --global` — skills-CLI сам определяет установленные агенты (поддержка 20+) |
 | claude.ai, Claude Desktop | Code → Download ZIP → Settings → Skills → загрузить архив |
 
-Для агентов без поддержки Agent Skills: вставьте текст SKILL.md в системные правила или AGENTS.md — паттерны работают и без обёртки скилла. Обновления — заново скопировать файл.
+Агенты без подтверждённой поддержки Agent Skills: вставьте текст SKILL.md в системные правила или AGENTS.md — паттерны работают и без обёртки скилла. Обновления — заново скопировать файл.
 
 ## Использование
 
