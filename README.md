@@ -1,5 +1,7 @@
 # nachisto
 
+[![skills.sh installs](https://skills.sh/b/S1lverElixir/nachisto)](https://skills.sh/S1lverElixir/nachisto)
+
 Русский humanizer для ИИ-агентов: находит и убирает штампы машинного текста, не меняя смысла. Работает с любым агентом, который читает SKILL.md.
 
 Нейросети пишут одинаково: «не просто X, а Y», «важно отметить», «в современном мире», «Давайте разберёмся», ровные абзацы «тезис — развитие — вывод», закрывашки «И это работает». Читатель замечает это за секунды. nachisto — чек-лист из 27 паттернов с workflow правки: агент сам находит штампы, переписывает и проверяет, что не потерял и не добавил лишнего.
@@ -63,6 +65,8 @@ pi install git:github.com/S1lverElixir/nachisto
 ```
 
 **claude.ai, Claude Desktop** — Code → Download ZIP → Settings → Skills → загрузить архив.
+
+**Claude Team/Enterprise** — без загрузок и ручных обновлений: Organization settings → Plugins & skills → Marketplaces → Add → **Sync from GitHub** → `S1lverElixir/nachisto`, «Sync automatically» включён. Каждый пуш в main сам обновляет скилл у всей команды.
 
 **Cline, Roo Code, Goose, Crush, Gemini CLI, GitHub Copilot, Windsurf, OpenClaw, Junie и другие** — skills CLI сам определяет установленные агенты (поддержка 75+):
 
