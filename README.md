@@ -7,7 +7,7 @@
 ## Чем отличается
 
 - Анти-галлюцинация на уровне workflow: шаг правки запрещает вживлять в чужой текст непроверённые факты, а шаг проверки ловит и добавления, и потери
-- Жанровые исключения: юридический, академический, художественный, маркетинг и UI-доки не ломаются — канцелярит в протоколе — норма, а не штамп
+- Жанровые исключения: юридический, академический, художественный, маркетинг и документация интерфейсов не ломаются — канцелярит в протоколе — норма, а не штамп
 - 25 паттернов в 6 категориях, от сильных к слабым, с примерами до и после
 
 ## Установка
@@ -24,7 +24,7 @@
 | Qoder | скопировать папку в `~/.qoder/skills/nachisto/` — или `npx skills add S1lverElixir/nachisto --global --agent qoder` |
 | MiniMax Code | скопировать папку в `~/.minimax/skills/nachisto/` — или через skills CLI (`--agent minimax-code`) |
 | pi | `pi install git:github.com/S1lverElixir/nachisto` |
-| Cline, Roo Code, Goose, Crush, Gemini CLI, GitHub Copilot, Windsurf, VS Code, OpenClaw, Junie и другие | `npx skills add S1lverElixir/nachisto --global` — skills-CLI сам определяет установленные агенты (поддержка 20+) |
+| Cline, Roo Code, Goose, Crush, Gemini CLI, GitHub Copilot, Windsurf, OpenClaw, Junie и другие | `npx skills add S1lverElixir/nachisto --global` — skills CLI сам определяет установленные агенты (поддержка 20+) |
 | claude.ai, Claude Desktop | Code → Download ZIP → Settings → Skills → загрузить архив |
 
 Агенты без подтверждённой поддержки Agent Skills: вставьте текст SKILL.md в системные правила или AGENTS.md — паттерны работают и без обёртки скилла. Обновления — заново скопировать файл.
