@@ -61,10 +61,10 @@ npx skills add S1lverElixir/nachisto --global --agent codex
 **pi**
 
 ```
-pi install git:github.com/S1lverElixir/nachisto
+npx skills add S1lverElixir/nachisto --global --agent pi
 ```
 
-**claude.ai, Claude Desktop** — Code → Download ZIP → Settings → Skills → загрузить архив.
+**claude.ai, Claude Desktop** — Code → Download ZIP → Customize → Skills → «+» → Create skill → Upload a skill → ZIP папки скилла.
 
 **Claude Team/Enterprise** — без загрузок и ручных обновлений: Organization settings → Plugins & skills → Marketplaces → Add → **Sync from GitHub** → `S1lverElixir/nachisto`, «Sync automatically» включён. Каждый пуш в main сам обновляет скилл у всей команды.
 
