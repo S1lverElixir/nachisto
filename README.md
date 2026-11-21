@@ -15,11 +15,11 @@
 
 | Инструмент | Команда |
 |---|---|
-| Claude Code 2.1.142+ | `/plugin marketplace add SilverElixir/nachisto`, затем `/plugin install nachisto@nachisto` |
-| Codex CLI | `npx skills add SilverElixir/nachisto --global --agent codex` |
+| Claude Code 2.1.142+ | `/plugin marketplace add S1lverElixir/nachisto`, затем `/plugin install nachisto@nachisto` |
+| Codex CLI | `npx skills add S1lverElixir/nachisto --global --agent codex` |
 | ZCode | скопировать папку со SKILL.md в `~/.agents/skills/nachisto/` |
-| pi | `pi install git:github.com/SilverElixir/nachisto` |
-| Gemini CLI, GitHub Copilot, Windsurf | `npx skills add SilverElixir/nachisto --global --agent '*'` |
+| pi | `pi install git:github.com/S1lverElixir/nachisto` |
+| Gemini CLI, GitHub Copilot, Windsurf | `npx skills add S1lverElixir/nachisto --global --agent '*'` |
 | claude.ai, Claude Desktop | Code → Download ZIP → Settings → Skills → загрузить архив |
 
 Для агентов без поддержки Agent Skills: вставь текст SKILL.md в системные правила или AGENTS.md — паттерны работают и без обёртки скилла. Обновления — заново скопировать файл.

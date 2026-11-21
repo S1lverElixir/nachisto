@@ -3,11 +3,11 @@
   "description": "Русский humanizer: находит и убирает штампы ИИ-текста, не меняя смысла.",
   "version": "2.2.3",
   "author": {
-    "name": "SilverElixir",
-    "url": "https://github.com/SilverElixir"
+    "name": "S1lverElixir",
+    "url": "https://github.com/S1lverElixir"
   },
-  "homepage": "https://github.com/SilverElixir/nachisto",
-  "repository": "https://github.com/SilverElixir/nachisto",
+  "homepage": "https://github.com/S1lverElixir/nachisto",
+  "repository": "https://github.com/S1lverElixir/nachisto",
   "license": "MIT",
   "keywords": [
     "humanizer",

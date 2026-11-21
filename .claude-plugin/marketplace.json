@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "nachisto",
   "owner": {
-    "name": "SilverElixir",
-    "url": "https://github.com/SilverElixir"
+    "name": "S1lverElixir",
+    "url": "https://github.com/S1lverElixir"
   },
   "plugins": [
     {
