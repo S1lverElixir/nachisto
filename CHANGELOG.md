@@ -2,6 +2,14 @@
 
 Все заметные изменения скилла. Формат — Keep a Changelog, версии — SemVer.
 
+## 2.4.7 — 2026-11-22
+
+По итогам аудита против свежих гайдов (agentskills.io best-practices/optimizing-descriptions/evaluating-skills, Claude Code docs, таксономия 26 skill smells — arXiv 2607.01456, SkillsBench — arXiv 2602.12670): скилл чист по запахам, применимы процессные усиления.
+
+- §G: «Модели 2026 года» → «Свежие модели» — снят smell Time Sensitive Skill
+- tests/: кейс 6 — baseline-прогон без скилла (атрибуция улучшения) и фиксированный триггер-набор с near-miss негативами по методологии optimizing-descriptions (~10 should-trigger + ~10 should-NOT, 3 прогона, порог 0.5, train/validation-сплит от оверфиттинга)
+- CI: трипвайр на объём тела (>5000 слов → error) — рост паттернов больше не раздувает контекст незаметно
+
 ## 2.4.6 — 2026-11-22
 
 Хардендинг по итогам живого тестирования на claude.ai (5 прогонов: 4 PASS, 1 FAIL — дефект модели, скилл прав).

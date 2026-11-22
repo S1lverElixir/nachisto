@@ -31,3 +31,11 @@ jobs:
             echo "::error::description вне лимита: $dlen"
             exit 1
           fi
+      - name: Тело скилла в бюджете слов
+        run: |
+          wc=$(python3 -c "import io; t=io.open('SKILL.md',encoding='utf-8').read(); body=t[t.index('---',3)+3:]; print(len(body.split()))")
+          echo "слов в теле: $wc (лимит 5000)"
+          if [ "$wc" -gt 5000 ]; then
+            echo "::error::тело скилла превышает 5000 слов: $wc"
+            exit 1
+          fi
