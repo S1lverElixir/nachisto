@@ -1,6 +1,8 @@
 # nachisto
 
-[![skills.sh installs](https://skills.sh/b/S1lverElixir/nachisto)](https://skills.sh/S1lverElixir/nachisto)
+[![skills.sh](https://img.shields.io/badge/skills.sh-nachisto-blueviolet)](https://www.skills.sh/s1lverelixir/nachisto)
+[![GitHub last commit](https://img.shields.io/github/last-commit/S1lverElixir/nachisto)](https://github.com/S1lverElixir/nachisto/commits/main)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **English:** nachisto is a skill for AI agents that removes AI-writing cliches from *Russian* prose — meaning intact. It works only on Russian text, and the skill itself is written in Russian. English triggers ("humanize this text", "clean up AI text", "make it sound natural") are built in: install it and just ask.
 
