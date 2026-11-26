@@ -1,0 +1,1 @@
+FAIL — skill hash 639c3ac893d16a2a17f1740d1d8853d63c0b02fd91fd884b819c8f93c0fe68b6. No-op report and modality now correct, but an explanation was appended after the final text. Chat URL: unavailable in the retained sanitized log.

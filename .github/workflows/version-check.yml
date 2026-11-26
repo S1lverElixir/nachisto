@@ -11,31 +11,23 @@ permissions:
 jobs:
   versions:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
     steps:
-      - uses: actions/checkout@v4
-      - name: Версии SKILL.md и манифестов совпадают
-        run: |
-          skill=$(grep -oP 'version: "\K[0-9.]+' SKILL.md)
-          plugin=$(jq -r .version .claude-plugin/plugin.json)
-          cursor=$(jq -r .version .cursor-plugin/plugin.json)
-          echo "SKILL.md=$skill plugin.json=$plugin cursor=$cursor"
-          if [ "$skill" != "$plugin" ] || [ "$plugin" != "$cursor" ]; then
-            echo "::error::Дрейф версий между SKILL.md, .claude-plugin/plugin.json и .cursor-plugin/plugin.json"
-            exit 1
-          fi
-      - name: Description в лимитах agentskills.io
-        run: |
-          dlen=$(python3 -c "import io,re; t=io.open('SKILL.md',encoding='utf-8').read(); fm=t.split('---')[1]; d=' '.join(re.search(r'description:\s*\|\n\s*(.*?)\nlicense:', fm, re.S).group(1).split()); print(len(d))")
-          echo "description=$dlen символов (лимит 1024)"
-          if [ "$dlen" -gt 1024 ] || [ "$dlen" -lt 1 ]; then
-            echo "::error::description вне лимита: $dlen"
-            exit 1
-          fi
-      - name: Тело скилла в бюджете слов
-        run: |
-          wc=$(python3 -c "import io; t=io.open('SKILL.md',encoding='utf-8').read(); body=t[t.index('---',3)+3:]; print(len(body.split()))")
-          echo "слов в теле: $wc (лимит 5000)"
-          if [ "$wc" -gt 5000 ]; then
-            echo "::error::тело скилла превышает 5000 слов: $wc"
-            exit 1
-          fi
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Install test dependencies
+        run: python3 -m pip install --user -r tests/requirements.txt
+      - name: Run harness self-test
+        run: python3 tests/harness.py self-test
+      - name: Run static checks
+        run: python3 tests/harness.py static
+      - name: Run package smoke test
+        run: python3 tests/harness.py package
+      - name: Measure context without external tokenizer
+        run: python3 tests/harness.py measure --tokenizer none

@@ -9,15 +9,19 @@
     {
       "name": "nachisto",
       "source": "./",
-      "description": "Russian humanizer: removes AI-writing cliches from Russian prose, meaning intact / убирает ИИ-штампы из русского текста",
+      "description": "Russian humanizer Agent Skill: removes AI-writing clichés from ready-made Russian prose while preserving meaning, facts, and author voice / убирает ИИ-штампы из русского текста",
       "license": "MIT",
       "keywords": [
+        "agent-skills",
         "humanizer",
         "russian",
+        "russian-text",
+        "russian-humanizer",
+        "ai-writing",
         "ai-text",
         "editing",
         "prose",
-        "skill"
+        "llm"
       ]
     }
   ]

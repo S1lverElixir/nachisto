@@ -1,2 +1,9 @@
 .DS_Store
 Thumbs.db
+tests/runs/**
+!tests/runs/**/
+!tests/runs/**/*-status.md
+!tests/runs/nachisto-current-payload.md
+__pycache__/
+*.pyc
+.qoder/

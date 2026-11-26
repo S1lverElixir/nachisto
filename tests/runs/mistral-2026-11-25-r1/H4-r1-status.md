@@ -1,0 +1,1 @@
+FAIL — skill hash a54fb9ee8b61a5e6b4544950d999da9af0fb1be4c8d0467918baac1b095cca1c. No-op decision and modality were correct, but the explicit-edit report (Первый перепис, Выжившие штампы, Изменено, Потеряно: нет) was omitted. Chat URL: unavailable in the retained sanitized log.

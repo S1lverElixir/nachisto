@@ -1,7 +1,7 @@
 {
   "name": "nachisto",
-  "description": "Russian humanizer: removes AI-writing cliches from Russian prose, meaning intact / убирает ИИ-штампы из русского текста",
-  "version": "2.4.20",
+  "description": "Russian humanizer Agent Skill: removes AI-writing clichés from ready-made Russian prose while preserving meaning, facts, and author voice / убирает ИИ-штампы из русского текста",
+  "version": "2.5.0",
   "author": {
     "name": "S1lverElixir",
     "url": "https://github.com/S1lverElixir"
@@ -10,12 +10,16 @@
   "repository": "https://github.com/S1lverElixir/nachisto",
   "license": "MIT",
   "keywords": [
+    "agent-skills",
     "humanizer",
     "russian",
+    "russian-text",
+    "russian-humanizer",
+    "ai-writing",
     "ai-text",
     "editing",
     "prose",
-    "skill"
+    "llm"
   ],
   "skills": ["./"]
 }
