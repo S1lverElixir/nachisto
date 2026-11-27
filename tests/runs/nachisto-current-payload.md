@@ -1,4 +1,4 @@
-# Payload nachisto 2.5.0 — 590b844cba1292b02c56fa7029eb31eca626d797126f9beeb33817bc99bccaa0
+# Payload nachisto 2.5.1 — 8630ce583d0c2063e117407a9fbf067e6877d942a68e441991f27ffa5a040eda
 
 Create or update skill named nachisto. Extract the exact bytes between each file marker and the next marker as the named file; preserve both files and enable the skill.
 
@@ -8,7 +8,7 @@ name: nachisto
 description: "Russian humanizer: «начисто», «очеловечь», «убери ИИ-штампы», humanize this Russian text. Правка и поиск штампов в русском тексте; не генерация, перевод, резюме, корректура или обход детекторов."
 license: MIT
 metadata:
-  version: "2.5.0"
+  version: "2.5.1"
 ---
 
 # nachisto
@@ -123,7 +123,7 @@ metadata:
 
 ## Источник
 
-Адаптация [blader/humanizer](https://github.com/blader/humanizer) v4.0.0 (MIT) для русского языка. Каталог переработан с учётом [русскоязычных исследований](https://ru.wikipedia.org/wiki/Википедия:Признаки_сгенерированности_текста) и родственных проектов; происхождение и ограничения evidence описаны в README и CHANGELOG.
+Адаптация [blader/humanizer](https://github.com/blader/humanizer) v4.0.0 (MIT) для русского языка. Каталог переработан с учётом [русскоязычного структурного обзора Wikipedia](https://ru.wikipedia.org/wiki/Википедия:Признаки_сгенерированности_текста) и родственных проектов; происхождение и ограничения evidence описаны в README и CHANGELOG.
 <!-- NACHISTO_FILE:references/patterns.md -->
 # Каталог паттернов nachisto
 

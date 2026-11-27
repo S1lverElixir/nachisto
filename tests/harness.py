@@ -24,7 +24,7 @@ from unittest.mock import patch
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "2.5.0"
+VERSION = "2.5.1"
 ORACLE_VERSION = "2.5.0-oracle-12"
 BASE_COMMIT = "939ad3bce80c7849c98c385b85a24426b23fa52b"
 # Pin the final tests/fixtures.json digest after the oracle-12 fixture update.
@@ -546,7 +546,7 @@ def markdown_files(root, repo_checks):
     if not repo_checks:
         return [root / "SKILL.md", *sorted((root / "references").rglob("*.md"))]
     files = list(root.glob("*.md"))
-    for directory in ("references", "tests", ".github"):
+    for directory in ("references", "docs", "tests", ".github"):
         files.extend((root / directory).rglob("*.md"))
     return sorted(
         path for path in files
@@ -965,8 +965,8 @@ def validate(root, repo_checks=True, pin_oracle=True):
                 ))
         try:
             changelog = read_text(root / "CHANGELOG.md")
-            match = re.search(r"(?m)^##\s+(\S+)", changelog)
-            top = match.group(1) if match else None
+            headings = re.findall(r"(?m)^##\s+(\S+)", changelog)
+            top = headings[1] if headings and headings[0] == "Unreleased" and len(headings) > 1 else (headings[0] if headings else None)
             check(is_semver(top), "changelog-semver", f"invalid top CHANGELOG version: {top!r}")
             check(top == version, "changelog-version", f"top CHANGELOG version must equal SKILL.md ({version})")
         except HarnessError as exc:
@@ -1756,6 +1756,14 @@ def copy_test_release(source, destination):
     relative_files = {
         *PACKAGE_FILES,
         "README.md",
+        "README.en.md",
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "docs/installation.md",
+        "docs/installation.ru.md",
+        "docs/compatibility.md",
+        "docs/compatibility.ru.md",
+        "docs/research.md",
         "CHANGELOG.md",
         ".gitattributes",
         ".gitignore",
@@ -1766,6 +1774,7 @@ def copy_test_release(source, destination):
         "tests/harness.py",
         "tests/requirements.txt",
         "tests/README.md",
+        "tests/README.ru.md",
         "tests/RESULTS.md",
         "tests/runs/nachisto-current-payload.md",
     }
@@ -1854,7 +1863,7 @@ def score_self_tests(root, work):
         "substituted output evidence": "result[1]: output evidence changed before open",
         "forged source commit": "source-commit: cannot verify git commit:",
         "commit content mismatch": "source-content: commit blobs do not match skill_sha256",
-        "current skill version drift": "skill-version: current SKILL.md must declare 2.5.0",
+        "current skill version drift": f"skill-version: current SKILL.md must declare {VERSION}",
         "observations as output evidence": "result[0]: output_ref reuses another file identity for B01#1",
     }
     outcomes = []
@@ -1910,7 +1919,7 @@ def score_self_tests(root, work):
         if name == "current skill version drift":
             score_root = work / "score-version-root"
             copy_test_release(root, score_root)
-            update_skill(score_root / "SKILL.md", lambda fm: fm["metadata"].update(version="2.5.1"))
+            update_skill(score_root / "SKILL.md", lambda fm: fm["metadata"].update(version="9.9.9"))
         data = synthetic_observations(score_root, run_dir)
         if name == "missing output evidence":
             del data["results"][0]["output_sha256"]
@@ -2437,7 +2446,7 @@ def self_test(root):
                 if name == "version drift":
                     path = case / MANIFESTS[0]
                     data = strict_json(path)
-                    data["version"] = "2.5.1"
+                    data["version"] = "9.9.9"
                     write_json(path, data)
                 elif name == "invalid SemVer":
                     update_skill(case / "SKILL.md", lambda fm: fm["metadata"].update(version="2.5"))

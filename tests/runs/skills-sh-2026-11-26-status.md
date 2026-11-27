@@ -2,7 +2,7 @@
 
 Date: 2026-11-26
 Status: BLOCKED
-Checked payload at the time: working-tree 2.5.0, skill SHA-256 `3e80288ad05d963d0b6c0d26aca2656b950b1b7fc21a17c0ceb8edae3a48c8e6`. Later working-tree payloads `5747d03…`, `06e843c7612b4237feee1d6e3c5c64713eefd71e5dbb872a8c9b1d73c8641be4`, `c1479995bea9b6e4d7cbaad9da2b7176532176e3b67771bad485012dda5ae02c` and current `590b844cba1292b02c56fa7029eb31eca626d797126f9beeb33817bc99bccaa0` have not been scanned or indexed.
+Checked payload at the time: working-tree 2.5.0, skill SHA-256 `3e80288ad05d963d0b6c0d26aca2656b950b1b7fc21a17c0ceb8edae3a48c8e6`. Later working-tree payloads `5747d03…`, `06e843c7612b4237feee1d6e3c5c64713eefd71e5dbb872a8c9b1d73c8641be4`, `c1479995bea9b6e4d7cbaad9da2b7176532176e3b67771bad485012dda5ae02c`, released `590b844cba1292b02c56fa7029eb31eca626d797126f9beeb33817bc99bccaa0`, and current 2.5.1 `8630ce583d0c2063e117407a9fbf067e6877d942a68e441991f27ffa5a040eda` have not been scanned or indexed.
 
 ## Public pages
 
@@ -24,7 +24,7 @@ Checked payload at the time: working-tree 2.5.0, skill SHA-256 `3e80288ad05d963d
 | `очеловечить текст` | absent from returned top 6 |
 | `русский humanizer` | absent from returned top 5 |
 
-Search footer: results are ranked by relevance, publisher, and installs. These observations describe the stale public index, not the unpublished working tree.
+Search footer: results are ranked by relevance, publisher, and installs. These observations describe the stale public index at the time of the check, not the current working tree.
 
 Sources:
 - https://www.skills.sh/s1lverelixir/nachisto

@@ -3,7 +3,7 @@ name: nachisto
 description: "Russian humanizer: «начисто», «очеловечь», «убери ИИ-штампы», humanize this Russian text. Правка и поиск штампов в русском тексте; не генерация, перевод, резюме, корректура или обход детекторов."
 license: MIT
 metadata:
-  version: "2.5.0"
+  version: "2.5.1"
 ---
 
 # nachisto
@@ -118,4 +118,4 @@ metadata:
 
 ## Источник
 
-Адаптация [blader/humanizer](https://github.com/blader/humanizer) v4.0.0 (MIT) для русского языка. Каталог переработан с учётом [русскоязычных исследований](https://ru.wikipedia.org/wiki/Википедия:Признаки_сгенерированности_текста) и родственных проектов; происхождение и ограничения evidence описаны в README и CHANGELOG.
+Адаптация [blader/humanizer](https://github.com/blader/humanizer) v4.0.0 (MIT) для русского языка. Каталог переработан с учётом [русскоязычного структурного обзора Wikipedia](https://ru.wikipedia.org/wiki/Википедия:Признаки_сгенерированности_текста) и родственных проектов; происхождение и ограничения evidence описаны в README и CHANGELOG.

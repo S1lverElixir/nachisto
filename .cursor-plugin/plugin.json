@@ -1,7 +1,7 @@
 {
   "name": "nachisto",
   "description": "Russian humanizer Agent Skill: removes AI-writing clichés from ready-made Russian prose while preserving meaning, facts, and author voice / убирает ИИ-штампы из русского текста",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "author": {
     "name": "S1lverElixir"
   },
